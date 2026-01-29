@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Book App</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="scripts.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <h1>LIBRARY</h1>
+    </header>
+    <main>
+      <button type="button" id="add-book-btn">New Book</button>
+      <section class="books-section">
+        <!-- DOM Manipulation in JS to add nodes here -->
+      </section>
+    </main>
+    <div id="form-modal" class="hidden">
+      <form action="" method='post' id="add-book-form">
+        <fieldset>
+          <div class="modal-header">
+            <legend>New Book</legend>
+            <button type="button" id="close-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-x-icon lucide-x"
+              >
+                <path d="M18 6 6 18" />
+                <path d="m6 6 12 12" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="form-element">
+            <label for="book_title">Title</label>
+            <input
+              type="text"
+              id="book_title"
+              name="book_title"
+              placeholder="Atomic Habits"
+            />
+          </div>
+
+          <div class="form-element">
+            <label for="book_author">Author</label>
+            <input
+              type="text"
+              id="book_author"
+              name="book_author"
+              placeholder="James Clear"
+            />
+          </div>
+
+          <div class="form-element">
+            <label for="book_page_amount">Pages</label>
+            <input
+              type="number"
+              id="book_page_amount"
+              name="book_page_amount"
+              placeholder="521"
+            />
+          </div>
+
+          <div class="form-element-check form-element">
+            <label for="is_book_read">Read</label>
+            <input type="checkbox" id="is_book_read" name="is_book_read" />
+          </div>
+          
+          <button type="submit" class="add-btn">Add</button>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
